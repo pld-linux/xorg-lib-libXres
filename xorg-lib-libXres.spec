@@ -17,6 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-proto-resourceproto-devel
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	libXres
 BuildRoot:	%{tmpdir}/libXres-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -37,6 +38,7 @@ Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXres = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-resourceproto-devel
+Obsoletes:	libXres-devel
 
 %description devel
 X Resource usage extension library.
@@ -57,6 +59,7 @@ Summary:	Static libXres libraries
 Summary(pl):	Biblioteki statyczne libXres
 Group:		Development/Libraries
 Requires:	xorg-lib-libXres-devel = %{version}-%{release}
+Obsoletes:	libXres-static
 
 %description static
 X Resource usage extension library.
