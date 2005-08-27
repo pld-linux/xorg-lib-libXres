@@ -1,5 +1,3 @@
-
-#
 Summary:	X Resource usage extension library
 Summary(pl):	Biblioteka rozszerzenia X Resource usage
 Name:		xorg-lib-libXres
@@ -12,13 +10,13 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXres-%{version}.tar.bz2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-resourceproto-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXres
-BuildRoot:	%{tmpdir}/libXres-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -30,12 +28,11 @@ X Resource usage extension library.
 Biblioteka rozszerzenia X Resource usage, s³u¿±cego do uzyskiwania
 informacji o wykorzystaniu zasobów X.
 
-
 %package devel
 Summary:	Header files libXres development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXres
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXres = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-resourceproto-devel
 Obsoletes:	libXres-devel
@@ -53,12 +50,11 @@ informacji o wykorzystaniu zasobów X.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXres.
 
-
 %package static
-Summary:	Static libXres libraries
-Summary(pl):	Biblioteki statyczne libXres
-Group:		Development/Libraries
-Requires:	xorg-lib-libXres-devel = %{version}-%{release}
+Summary:	Static libXres library
+Summary(pl):	Biblioteka statyczna libXres
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXres-static
 
 %description static
@@ -72,10 +68,8 @@ informacji o wykorzystaniu zasobów X.
 
 Pakiet zawiera statyczn± bibliotekê libXres.
 
-
 %prep
 %setup -q -n libXres-%{version}
-
 
 %build
 %{__libtoolize}
@@ -99,21 +93,18 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%attr(755,root,wheel) %{_libdir}/libXRes.so.*
-
+%attr(755,root,root) %{_libdir}/libXRes.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/extensions/*.h
+%attr(755,root,root) %{_libdir}/libXRes.so
 %{_libdir}/libXRes.la
-%attr(755,root,wheel) %{_libdir}/libXRes.so
+%{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xres.pc
 %{_mandir}/man3/*.3*
-
 
 %files static
 %defattr(644,root,root,755)
