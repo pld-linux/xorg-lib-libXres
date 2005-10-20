@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-resourceproto-devel >= 0.99
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 0.99.1
 Obsoletes:	libXres
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
