@@ -26,8 +26,8 @@ Biblioteka rozszerzenia X Resource usage, s³u¿±cego do uzyskiwania
 informacji o wykorzystaniu zasobów X.
 
 %package devel
-Summary:	Header files libXres development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXres
+Summary:	Header files for libXres library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXres
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -38,7 +38,7 @@ Obsoletes:	libXres-devel
 X Resource usage extension library.
 
 This package contains the header files needed to develop programs that
-use these libXres.
+use libXres.
 
 %description devel -l pl
 Biblioteka rozszerzenia X Resource usage, s³u¿±cego do uzyskiwania
