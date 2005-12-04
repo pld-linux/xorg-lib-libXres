@@ -1,12 +1,12 @@
 Summary:	X Resource usage extension library
 Summary(pl):	Biblioteka rozszerzenia X Resource usage
 Name:		xorg-lib-libXres
-Version:	0.99.2
+Version:	0.99.3
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/libXres-%{version}.tar.bz2
-# Source0-md5:	63e624cd9ee5dd571366b494b1e64dff
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXres-%{version}.tar.bz2
+# Source0-md5:	6da6abb97a69524d909700ce46cc26cf
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-resourceproto-devel >= 0.99
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXres
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -82,7 +82,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	libmandir=%{_mandir}/man3 \
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
