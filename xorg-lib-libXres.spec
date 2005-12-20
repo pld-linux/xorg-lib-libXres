@@ -1,12 +1,12 @@
 Summary:	X Resource usage extension library
 Summary(pl):	Biblioteka rozszerzenia X Resource usage
 Name:		xorg-lib-libXres
-Version:	0.99.3
+Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXres-%{version}.tar.bz2
-# Source0-md5:	6da6abb97a69524d909700ce46cc26cf
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXres-%{version}.tar.bz2
+# Source0-md5:	1fd0c1b20c08ce9712e82a649482a2b2
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
