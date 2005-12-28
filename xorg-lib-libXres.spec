@@ -5,8 +5,8 @@ Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXres-%{version}.tar.bz2
-# Source0-md5:	1fd0c1b20c08ce9712e82a649482a2b2
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXres-%{version}.tar.bz2
+# Source0-md5:	1de4e33d55374e7068704c58c672c0ce
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
