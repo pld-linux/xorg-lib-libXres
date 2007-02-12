@@ -1,5 +1,5 @@
 Summary:	X Resource usage extension library
-Summary(pl.UTF-8):   Biblioteka rozszerzenia X Resource usage
+Summary(pl.UTF-8):	Biblioteka rozszerzenia X Resource usage
 Name:		xorg-lib-libXres
 Version:	1.0.3
 Release:	1
@@ -27,7 +27,7 @@ informacji o wykorzystaniu zasobów X.
 
 %package devel
 Summary:	Header files for libXres library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXres
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXres
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -49,7 +49,7 @@ używających biblioteki libXres.
 
 %package static
 Summary:	Static libXres library
-Summary(pl.UTF-8):   Biblioteka statyczna libXres
+Summary(pl.UTF-8):	Biblioteka statyczna libXres
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXres-static
