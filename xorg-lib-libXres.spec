@@ -1,5 +1,5 @@
 Summary:	X Resource usage extension library
-Summary(pl):	Biblioteka rozszerzenia X Resource usage
+Summary(pl.UTF-8):   Biblioteka rozszerzenia X Resource usage
 Name:		xorg-lib-libXres
 Version:	1.0.3
 Release:	1
@@ -21,13 +21,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X Resource usage extension library.
 
-%description -l pl
-Biblioteka rozszerzenia X Resource usage, s³u¿±cego do uzyskiwania
-informacji o wykorzystaniu zasobów X.
+%description -l pl.UTF-8
+Biblioteka rozszerzenia X Resource usage, sÅ‚uÅ¼Ä…cego do uzyskiwania
+informacji o wykorzystaniu zasobÃ³w X.
 
 %package devel
 Summary:	Header files for libXres library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXres
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXres
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -40,16 +40,16 @@ X Resource usage extension library.
 This package contains the header files needed to develop programs that
 use libXres.
 
-%description devel -l pl
-Biblioteka rozszerzenia X Resource usage, s³u¿±cego do uzyskiwania
-informacji o wykorzystaniu zasobów X.
+%description devel -l pl.UTF-8
+Biblioteka rozszerzenia X Resource usage, sÅ‚uÅ¼Ä…cego do uzyskiwania
+informacji o wykorzystaniu zasobÃ³w X.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXres.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXres.
 
 %package static
 Summary:	Static libXres library
-Summary(pl):	Biblioteka statyczna libXres
+Summary(pl.UTF-8):   Biblioteka statyczna libXres
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXres-static
@@ -59,11 +59,11 @@ X Resource usage extension library.
 
 This package contains the static libXres library.
 
-%description static -l pl
-Biblioteka rozszerzenia X Resource usage, s³u¿±cego do uzyskiwania
-informacji o wykorzystaniu zasobów X.
+%description static -l pl.UTF-8
+Biblioteka rozszerzenia X Resource usage, sÅ‚uÅ¼Ä…cego do uzyskiwania
+informacji o wykorzystaniu zasobÃ³w X.
 
-Pakiet zawiera statyczn± bibliotekê libXres.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXres.
 
 %prep
 %setup -q -n libXres-%{version}
