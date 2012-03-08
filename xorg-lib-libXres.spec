@@ -1,12 +1,12 @@
 Summary:	X-Resource extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia X-Resource
 Name:		xorg-lib-libXres
-Version:	1.0.5
-Release:	2
+Version:	1.0.6
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXres-%{version}.tar.bz2
-# Source0-md5:	d08f0b6df3f96c051637d37009f4e55a
+# Source0-md5:	80d0c6d8522fa7a645e4f522e9a9cd20
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
