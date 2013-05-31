@@ -1,12 +1,12 @@
 Summary:	X-Resource extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia X-Resource
 Name:		xorg-lib-libXres
-Version:	1.0.6
+Version:	1.0.7
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXres-%{version}.tar.bz2
-# Source0-md5:	80d0c6d8522fa7a645e4f522e9a9cd20
+# Source0-md5:	45ef29206a6b58254c81bea28ec6c95f
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -84,6 +84,9 @@ rm -rf $RPM_BUILD_ROOT
 	pkgconfigdir=%{_pkgconfigdir}
 
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/libXRes.la
+
+# there's no man3x in pld
+grep -rl man3x $RPM_BUILD_ROOT%{_mandir}/man3/* | xargs %{__sed} -i -e 's,man3x,man3,'
 
 %clean
 rm -rf $RPM_BUILD_ROOT
