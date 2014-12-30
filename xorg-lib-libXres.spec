@@ -106,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libXRes.so
 %{_includedir}/X11/extensions/XRes.h
 %{_pkgconfigdir}/xres.pc
-%{_mandir}/man3/XRes*.3x*
+%{_mandir}/man3/XRes*.3*
 
 %files static
 %defattr(644,root,root,755)
