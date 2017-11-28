@@ -5,17 +5,20 @@ Version:	1.2.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXres-%{version}.tar.bz2
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXres-%{version}.tar.bz2
 # Source0-md5:	5d6d443d1abc8e1f6fc1c57fb27729bb
-URL:		http://xorg.freedesktop.org/
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	sed >= 4.0
+BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-proto-resourceproto-devel >= 1.0
+BuildRequires:	xorg-proto-resourceproto-devel >= 1.2.0
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+Requires:	xorg-lib-libX11 >= 1.6
 Obsoletes:	libXres
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,8 +35,10 @@ Summary:	Header files for libXres library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXres
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-lib-libXext-devel
-Requires:	xorg-proto-resourceproto-devel >= 1.0
+Requires:	xorg-proto-resourceproto-devel >= 1.2.0
+Requires:	xorg-proto-xextproto-devel
 Obsoletes:	libXres-devel
 
 %description devel
