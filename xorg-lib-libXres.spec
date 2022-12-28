@@ -1,25 +1,27 @@
 Summary:	X-Resource extension client library
 Summary(pl.UTF-8):	Biblioteka kliencka rozszerzenia X-Resource
 Name:		xorg-lib-libXres
-Version:	1.2.1
-Release:	2
+Version:	1.2.2
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXres-%{version}.tar.bz2
-# Source0-md5:	e142ef0ed0366ae89c771c27cfc2ccd1
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXres-%{version}.tar.xz
+# Source0-md5:	66c9e9e01b0b53052bb1d02ebf8d7040
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	sed >= 4.0
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-resourceproto-devel >= 1.2.0
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Requires:	xorg-lib-libX11 >= 1.6
-Obsoletes:	libXres
+Obsoletes:	libXres < 1.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,7 +41,7 @@ Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-lib-libXext-devel
 Requires:	xorg-proto-resourceproto-devel >= 1.2.0
 Requires:	xorg-proto-xextproto-devel
-Obsoletes:	libXres-devel
+Obsoletes:	libXres-devel < 1.1
 
 %description devel
 X-Resource extension client library.
@@ -58,7 +60,7 @@ Summary:	Static libXres library
 Summary(pl.UTF-8):	Biblioteka statyczna libXres
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXres-static
+Obsoletes:	libXres-static < 1.1
 
 %description static
 X-Resource extension client library.
